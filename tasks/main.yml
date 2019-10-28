@@ -1,0 +1,7 @@
+---
+## Simple role to install the apache server for the dokuwiki role (see separate repository)
+## apache2 configuration
+- name: install web server packages
+  apt: pkg={{ item }} state=present update-cache=true
+  with_items:
+    - apache2
